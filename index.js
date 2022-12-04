@@ -1,7 +1,7 @@
 import express from 'express';
 
 import categoryRoutes from './api/routes/categoryRoutes'
-import categoryRoutes from './api/routes/categoryRoutes'
+import productRoutes from './api/routes/productRoutes'
 
 const app = express()
 
