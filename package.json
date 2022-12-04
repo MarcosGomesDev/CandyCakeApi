@@ -7,7 +7,7 @@
     "scripts": {
         "build": "tsc",
         "dev": "nodemon --exec ts-node --files src/index.ts",
-        "start": "node index.js"
+        "start": "node ./src/index.js"
     },
     "devDependencies": {
         "@types/bcrypt": "^5.0.0",
