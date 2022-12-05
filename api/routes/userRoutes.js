@@ -23,7 +23,13 @@ const uploadProfile_1 = __importDefault(require("../App/useCases/user/uploadProf
 const verifyTokenIsValid_1 = __importDefault(require("../App/useCases/user/verifyTokenIsValid"));
 const userRoutes = express_1.default.Router();
 userRoutes.get('/', (res) => {
-    return res.status(200).json('Api conectada com sucesso');
+    try {
+        return res.status(200).json('Api conectada com sucesso');
+    }
+    catch (error) {
+        console.log(error);
+        return res.status(500).json('Problema ao conectar api');
+    }
 });
 userRoutes.get('/users', authUser_1.default, listUsers_1.default);
 userRoutes.get('/favorites', authUser_1.default, listFavorites_1.default);
