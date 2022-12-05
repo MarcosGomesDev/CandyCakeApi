@@ -24,7 +24,7 @@ const verifyTokenIsValid_1 = __importDefault(require("../App/useCases/user/verif
 const userRoutes = express_1.default.Router();
 userRoutes.get('/initial', (res) => {
     try {
-        return res.status(200).json('Api conectada com sucesso');
+        return res.status(200).json({message: 'api conectada com sucesso'});
     }
     catch (error) {
         console.log(error);
