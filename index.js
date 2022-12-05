@@ -23,7 +23,7 @@ app.use(categoryRoutes_1.default);
 app.use(subcategoryRoutes_1.default);
 app.use(productRoutes_1.default);
 app.get('/', (res) => {
-    res.json('ola mundo');
+    return res.json('ola mundo');
 });
 app.listen(process.env.PORT, () => {
     console.log('server on');
