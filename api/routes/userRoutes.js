@@ -22,6 +22,9 @@ const updateUser_1 = __importDefault(require("../App/useCases/user/updateUser"))
 const uploadProfile_1 = __importDefault(require("../App/useCases/user/uploadProfile"));
 const verifyTokenIsValid_1 = __importDefault(require("../App/useCases/user/verifyTokenIsValid"));
 const userRoutes = express_1.default.Router();
+userRoutes.get('/', (res) => {
+    return res.status(200).json('Api conectada com sucesso');
+});
 userRoutes.get('/users', authUser_1.default, listUsers_1.default);
 userRoutes.get('/favorites', authUser_1.default, listFavorites_1.default);
 userRoutes.get('/search', searchProduct_1.default);
