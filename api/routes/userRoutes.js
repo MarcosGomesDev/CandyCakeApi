@@ -22,7 +22,7 @@ const updateUser_1 = __importDefault(require("../App/useCases/user/updateUser"))
 const uploadProfile_1 = __importDefault(require("../App/useCases/user/uploadProfile"));
 const verifyTokenIsValid_1 = __importDefault(require("../App/useCases/user/verifyTokenIsValid"));
 const userRoutes = express_1.default.Router();
-userRoutes.get('/', (res) => {
+userRoutes.get('/initial', (res) => {
     try {
         return res.status(200).json('Api conectada com sucesso');
     }
