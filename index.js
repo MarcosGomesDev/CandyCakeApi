@@ -15,7 +15,6 @@ const subcategoryRoutes_1 = __importDefault(require("./api/routes/subcategoryRou
 const productRoutes_1 = __importDefault(require("./api/routes/productRoutes"));
 // import './api/database'
 const app = (0, express_1.default)();
-const init = express_1.default.Router();
 const MONGO_URI = "mongodb+srv://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD + "@cluster0.1bqmy.mongodb.net/CandyCake?retryWrites=true&w=majority";
 mongoose_1.default.connect(MONGO_URI)
     .then(() => {
@@ -28,9 +27,6 @@ mongoose_1.default.connect(MONGO_URI)
     app.use(categoryRoutes_1.default);
     app.use(subcategoryRoutes_1.default);
     app.use(productRoutes_1.default);
-    init.get('/', (res) => {
-        return res.status(200).json('Api conectada com sucesso!');
-    });
     app.listen(process.env.PORT, () => {
         console.log('server on');
     });
